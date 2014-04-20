@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?g5kalg');
+	src:url('fonts/icomoon.eot?#iefixg5kalg') format('embedded-opentype'),
+		url('fonts/icomoon.woff?g5kalg') format('woff'),
+		url('fonts/icomoon.ttf?g5kalg') format('truetype'),
+		url('fonts/icomoon.svg?g5kalg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+	content: "\e600";
+}
+.icon-twitter:before {
+	content: "\e601";
+}
+.icon-github:before {
+	content: "\e602";
+}
+.icon-soundcloud:before {
+	content: "\e603";
+}
+.icon-github2:before {
+	content: "\e604";
+}
+.icon-twitter2:before {
+	content: "\e605";
+}
+.icon-bubble:before {
+	content: "\e606";
+}
+.icon-mail2:before {
+	content: "\e607";
+}
+.icon-twitter3:before {
+	content: "\e608";
+}
+.icon-soundcloud2:before {
+	content: "\e609";
+}
+.icon-github3:before {
+	content: "\e60a";
+}

@@ -1,0 +1,128 @@
+html, body {
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-color: #fafafa !important;
+	color: #13a !important;
+	font-family: 'Asap', sans-serif !important;
+}
+
+.music {
+	height: 100%;
+	width: 100vw;
+	float: left;
+}
+
+.music > span {
+	padding: 2rem;
+}
+
+.soundcloud-widget {
+	width: 40%;
+	height: 50%;
+	vertical-align: middle;
+	display: inline-block;
+	padding-top: 3rem;
+}
+
+.music > span > div {
+	height: 40%;
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.business-card {
+	padding: 20vh 0 1rem;
+	text-align: center;
+}
+
+.business-card > .social {
+	padding: 1rem 0 0;
+	display: block;
+	position: relative;
+	text-align: center;
+	font-size: 3rem;
+	color: #13a;
+}
+
+.social > span > a {
+	color: #3cc;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 0.6rem;
+}
+
+.social > span > a:hover {
+	text-decoration: none;
+	-webkit-transform: rotate(5deg);
+	-moz-transition: rotate(5deg);
+    -o-transition: rotate(5deg);
+    transition: rotate(5deg);
+}
+
+.name {
+	font-weight: 700;
+	font-style: italic;
+	color: #13a;
+	font-size: 6rem;
+	left: 0;
+	right: 0;
+	padding-bottom: 0.5rem;
+}
+
+.tighter-kerning-v1 {
+	letter-spacing: -0.2rem;
+}
+
+.tighter-kerning-v2 {
+	letter-spacing: -0.6rem;
+}
+
+.content-links {
+	padding-top: 1rem;
+	text-align: center;
+	vertical-align: inline-block;
+	font-size: 2rem;
+}
+
+.extra-padding {
+	padding: 5rem;
+}
+
+.content-links > a {
+	margin: 0 2rem;
+	color: #13a;
+	text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+
+	.business-card {
+		padding: 25vh 0 1rem;
+	}
+	
+	html {
+		font-size: 12px;
+	}
+
+	.name {
+		font-size: 4rem;
+	}
+
+	.tighter-kerning-v1 {
+		letter-spacing: 0rem;
+	}
+
+	.tighter-kerning-v2 {
+		letter-spacing: -0.3rem;
+	}
+
+	.business-card > .social {
+		padding: 2rem 0 0;
+	}
+
+}

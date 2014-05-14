@@ -4,7 +4,7 @@ html, body {
 	padding: 0;
 	position: relative;
 	background-color: #fafafa !important;
-	color: #13a !important;
+	color: #16b !important;
 	font-family: 'Asap', sans-serif !important;
 }
 
@@ -63,7 +63,6 @@ html, body {
 .name {
 	font-weight: 700;
 	font-style: italic;
-	color: #13a;
 	font-size: 6rem;
 	left: 0;
 	right: 0;
@@ -91,7 +90,6 @@ html, body {
 
 .content-links > a {
 	margin: 0 2rem;
-	color: #13a;
 	text-decoration: none;
 }
 

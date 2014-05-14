@@ -44,11 +44,9 @@ html, body {
 	position: relative;
 	text-align: center;
 	font-size: 3rem;
-	color: #13a;
 }
 
 .social > span > a {
-	color: #3cc;
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 0.6rem;
@@ -77,7 +75,7 @@ html, body {
 }
 
 .tighter-kerning-v2 {
-	letter-spacing: -0.6rem;
+	letter-spacing: -0.7rem;
 }
 
 .content-links {

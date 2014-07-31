@@ -18,11 +18,13 @@ window.onload=function() {
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].addClass("hover");
+				console.log("Test1");
 			};
 		}, 900);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].removeClass("hover");
+				console.log("Test2");
 			};
 		}, 1000);
 	}

@@ -14,7 +14,7 @@ window.onload=function() {
 	  iconArray[ i ].style.color = colorArray[ randomColor ];
 	}
 
-	function wink(iconArray){
+	function wink(){
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].addClass("hover");

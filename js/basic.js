@@ -13,4 +13,19 @@ window.onload=function() {
 	for (var i = 0; i < iconArray.length; i++ ) {
 	  iconArray[ i ].style.color = colorArray[ randomColor ];
 	}
+
+	function wink(iconArray){
+		setTimeout(function () {
+			for (var i = 0; i < iconArray.length; i++ ) {
+				iconArray[i].addClass("hover");
+			};
+		}, 900);
+		setTimeout(function () {
+			for (var i = 0; i < iconArray.length; i++ ) {
+				iconArray[i].removeClass("hover");
+			};
+		}, 1000);
+	}
+
+
 }

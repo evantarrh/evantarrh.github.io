@@ -15,6 +15,7 @@ window.onload=function() {
 	}
 
 	function wink(){
+		console.log("for the love of god test");
 		setTimeout(function () {
 			console.log("test");
 			for (var j = 0; j < iconArray.length; j++ ) {

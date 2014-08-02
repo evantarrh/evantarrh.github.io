@@ -16,12 +16,14 @@ window.onload=function() {
 
 	function wink(){
 		setTimeout(function () {
+			console.log("test");
 			for (var j = 0; j < iconArray.length; j++ ) {
 				iconArray[i].addClass("hover");
 				console.log("Test1");
 			};
 		}, 900);
 		setTimeout(function () {
+			console.log("testy");
 			for (var k = 0; k < iconArray.length; k++ ) {
 				iconArray[i].removeClass("hover");
 				console.log("Test2");

@@ -18,14 +18,14 @@ window.onload=function() {
 		console.log("for the love of god test");
 		setTimeout(function () {
 			console.log("test");
-			for (var j = 0; j < iconArray.length; j++ ) {
+			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].addClass("hover");
 				console.log("Test1");
 			};
 		}, 900);
 		setTimeout(function () {
 			console.log("testy");
-			for (var k = 0; k < iconArray.length; k++ ) {
+			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].removeClass("hover");
 				console.log("Test2");
 			};

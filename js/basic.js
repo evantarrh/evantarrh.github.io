@@ -32,5 +32,6 @@ window.onload=function() {
 		}, 1000);
 	}
 
+	wink();
 
 }

@@ -24,17 +24,17 @@ window.onload=function() {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.remove("hoveredicon");
 			};
-		}, 750);
+		}, 700);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.add("hoveredicon");
 			};
-		}, 900);
+		}, 800);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.remove("hoveredicon");
 			};
-		}, 1050);
+		}, 900);
 	}
 
 	wink();

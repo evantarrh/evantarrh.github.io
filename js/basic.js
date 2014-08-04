@@ -15,13 +15,9 @@ window.onload=function() {
 	}
 
 	function wink(){
-		console.log("for the love of god test");
-		function () {
-			console.log("test");
-			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].classList.add("hoveredicon");
-				console.log("Test1");
-			};
+		for (var i = 0; i < iconArray.length; i++ ) {
+			iconArray[i].classList.add("hoveredicon");
+			console.log("Test1");
 		};
 		setTimeout(function () {
 			console.log("testy");

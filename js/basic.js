@@ -16,22 +16,23 @@ window.onload=function() {
 
 	function wink(){
 		console.log("for the love of god test");
-		setTimeout(function () {
+		function () {
 			console.log("test");
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.add("hoveredicon");
 				console.log("Test1");
 			};
-		}, 900);
+		};
 		setTimeout(function () {
 			console.log("testy");
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.remove("hoveredicon");
 				console.log("Test2");
 			};
-		}, 1000);
+		}, 100);
 	}
 
-	wink();
+	setTimeout(wink(), 400);
+	setTimeout(wink(), 600);
 
 }

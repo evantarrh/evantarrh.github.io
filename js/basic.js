@@ -19,14 +19,14 @@ window.onload=function() {
 		setTimeout(function () {
 			console.log("test");
 			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].addClass("hover");
+				iconArray[i].classList.add("hoveredicon");
 				console.log("Test1");
 			};
 		}, 900);
 		setTimeout(function () {
 			console.log("testy");
 			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].removeClass("hover");
+				iconArray[i].classList.remove("hoveredicon");
 				console.log("Test2");
 			};
 		}, 1000);

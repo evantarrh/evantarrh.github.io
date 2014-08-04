@@ -53,7 +53,7 @@ html, body {
 	margin: 0 0.6rem;
 }
 
-.social > span > a:hover {
+.social > span > a:hover, .hoveredicon {
 	text-decoration: none;
 	-webkit-transform: rotate(5deg);
 	-moz-transition: rotate(5deg);

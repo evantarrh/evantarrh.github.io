@@ -19,22 +19,22 @@ window.onload=function() {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.add("hoveredicon");
 			};
-		}, 300);
+		}, 600);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.remove("hoveredicon");
 			};
-		}, 400);
+		}, 750);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.add("hoveredicon");
 			};
-		}, 500);
+		}, 900);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
 				iconArray[i].classList.remove("hoveredicon");
 			};
-		}, 600);
+		}, 1050);
 	}
 
 	wink();

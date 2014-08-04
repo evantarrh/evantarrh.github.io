@@ -15,20 +15,28 @@ window.onload=function() {
 	}
 
 	function wink(){
-		for (var i = 0; i < iconArray.length; i++ ) {
-			iconArray[i].classList.add("hoveredicon");
-			console.log("Test1");
-		};
 		setTimeout(function () {
-			console.log("testy");
 			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].classList.remove("hoveredicon");
-				console.log("Test2");
+				iconArray[i].classList.add("hoveredicon");
 			};
-		}, 100);
+		}, 300);
+		setTimeout(function () {
+			for (var i = 0; i < iconArray.length; i++ ) {
+				iconArray[i].classList.add("hoveredicon");
+			};
+		}, 400);
+		setTimeout(function () {
+			for (var i = 0; i < iconArray.length; i++ ) {
+				iconArray[i].classList.add("hoveredicon");
+			};
+		}, 500);
+		setTimeout(function () {
+			for (var i = 0; i < iconArray.length; i++ ) {
+				iconArray[i].classList.add("hoveredicon");
+			};
+		}, 600);
 	}
 
-	setTimeout(wink(), 400);
-	setTimeout(wink(), 600);
+	wink();
 
 }

@@ -22,7 +22,7 @@ window.onload=function() {
 		}, 300);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].classList.add("hoveredicon");
+				iconArray[i].classList.remove("hoveredicon");
 			};
 		}, 400);
 		setTimeout(function () {
@@ -32,7 +32,7 @@ window.onload=function() {
 		}, 500);
 		setTimeout(function () {
 			for (var i = 0; i < iconArray.length; i++ ) {
-				iconArray[i].classList.add("hoveredicon");
+				iconArray[i].classList.remove("hoveredicon");
 			};
 		}, 600);
 	}

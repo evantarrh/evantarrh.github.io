@@ -1,12 +1,25 @@
 html, body {
+	padding-top: 2rem;
 	max-height: 100%;
 	margin: 0;
-	padding: 0;
 	position: relative;
-	background-color: #fafafa !important;
+	background-color: #666f6f !important;
 	color: #16b !important;
 	font-family: 'Asap', sans-serif !important;
 	text-align: center;
+}
+
+/*.face-row div {
+	transition: all ease 0.3s;
+}
+.face-row:hover div {
+	margin: 0.4rem 0.4rem;
+}*/
+
+.mouth:hover {
+	
+	padding-top: 1rem;
+	cursor: none;
 }
 
 .face-div {
@@ -14,8 +27,64 @@ html, body {
 	padding-top: 4rem;
 }
 
+.face-div {
+
+}
+
 .face-pic {
 	width: 240px;
+}
+
+.html-face {
+	text-align: center;
+	height: 4rem;
+	width: 100%;
+}
+
+.face-row {
+	display: block;
+	padding: 0;
+	text-align: center;
+	font-size: 0;
+}
+
+.hair {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: #523c03;
+	margin: 0px;
+}
+
+.skin {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: #f7e7e2;
+	margin: 0px;
+}
+
+.glasses {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: #000;
+	margin: 0px;
+}
+.eyes {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: #fff;
+	margin: 0px;
+}
+
+.nose {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: #c7b5af;
+	margin: 0px;
 }
 
 .music {

@@ -6,6 +6,16 @@ html, body {
 	background-color: #fafafa !important;
 	color: #16b !important;
 	font-family: 'Asap', sans-serif !important;
+	text-align: center;
+}
+
+.face-div {
+	text-align: center;
+	padding-top: 4rem;
+}
+
+.face-pic {
+	width: 240px;
 }
 
 .music {

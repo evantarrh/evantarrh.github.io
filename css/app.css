@@ -9,26 +9,29 @@ html, body {
 	text-align: center;
 }
 
-/*.face-row div {
-	transition: all ease 0.3s;
+.face-row div:hover {
+	background-color: #000;
 }
-.face-row:hover div {
-	margin: 0.4rem 0.4rem;
-}*/
 
-.mouth:hover {
-	
-	padding-top: 1rem;
+.face-wrapper {
+	height: 14rem;
+	width: 12rem;
+	margin: 0 auto;
+}
+
+.face-wrapper:hover {
 	cursor: none;
 }
+
+/*.mouth:hover {
+
+	padding-top: 1rem;
+	cursor: none;
+}*/
 
 .face-div {
 	text-align: center;
 	padding-top: 4rem;
-}
-
-.face-div {
-
 }
 
 .face-pic {

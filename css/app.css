@@ -29,15 +29,6 @@ html, body {
 	cursor: none;
 }*/
 
-.face-div {
-	text-align: center;
-	padding-top: 4rem;
-}
-
-.face-pic {
-	width: 240px;
-}
-
 .html-face {
 	text-align: center;
 	height: 4rem;
@@ -55,7 +46,7 @@ html, body {
 	display: inline-block;
 	height: 1rem;
 	width: 1rem;
-	background-color: #523c03;
+	background-color: #3f2808;
 	margin: 0px;
 }
 
@@ -90,31 +81,6 @@ html, body {
 	margin: 0px;
 }
 
-.music {
-	height: 100%;
-	width: 100vw;
-	float: left;
-}
-
-.music > span {
-	padding: 2rem;
-}
-
-.soundcloud-widget {
-	width: 40%;
-	height: 50%;
-	vertical-align: middle;
-	display: inline-block;
-	padding-top: 3rem;
-}
-
-.music > span > div {
-	height: 40%;
-	width: 40%;
-	display: inline-block;
-	vertical-align: top;
-}
-
 .business-card {
 	padding: 20vh 0 1rem;
 	text-align: center;
@@ -129,10 +95,10 @@ html, body {
 }
 
 .social > span > a {
-	color: rgba(0, 0, 0, 0);
+	color: #c2bbbb;
 	text-decoration: none;
 	display: inline-block;
-	margin: 0 0.6rem;
+	margin: 0 1.4rem;
 }
 
 .social > span > a:hover, .hoveredicon {
@@ -143,40 +109,6 @@ html, body {
     transition: rotate(5deg);
 }
 
-.name {
-	font-weight: 700;
-	font-style: italic;
-	font-size: 6rem;
-	left: 0;
-	right: 0;
-	padding-bottom: 0.5rem;
-}
-
-.tighter-kerning-v1 {
-	letter-spacing: -0.2rem;
-}
-
-.tighter-kerning-v2 {
-	letter-spacing: -0.7rem;
-}
-
-.content-links {
-	padding-top: 1rem;
-	text-align: center;
-	vertical-align: inline-block;
-	font-size: 2rem;
-}
-
-.extra-padding {
-	padding: 5rem;
-}
-
-.content-links > a {
-	margin: 0 2rem;
-	text-decoration: none;
-}
-
-
 
 @media only screen and (max-width: 480px) {
 
@@ -186,18 +118,6 @@ html, body {
 	
 	html {
 		font-size: 12px;
-	}
-
-	.name {
-		font-size: 4rem;
-	}
-
-	.tighter-kerning-v1 {
-		letter-spacing: 0rem;
-	}
-
-	.tighter-kerning-v2 {
-		letter-spacing: -0.3rem;
 	}
 
 	.business-card > .social {

@@ -11,6 +11,9 @@ window.onload=function() {
 	var eyes = document.querySelectorAll(".eyes");
 
 
+	faceBlocks.onclick = blink();
+
+
 
 	function blink(){
 		setTimeout(function () {
@@ -20,7 +23,7 @@ window.onload=function() {
 					eyes[i].style.backgroundColor = "#000";
 				}
 			};
-		}, 600);
+		}, 100);
 		setTimeout(function () {
 			for (var i = 0; i < glasses.length; i++ ) {
 				glasses[i].style.backgroundColor = "#000";
@@ -28,7 +31,7 @@ window.onload=function() {
 					eyes[i].style.backgroundColor = "#fff";
 				}
 			};
-		}, 700);
+		}, 200);
 		setTimeout(function () {
 			for (var i = 0; i < glasses.length; i++ ) {
 				glasses[i].style.backgroundColor = "#f7e7e2";
@@ -36,7 +39,7 @@ window.onload=function() {
 					eyes[i].style.backgroundColor = "#000";
 				}
 			};
-		}, 800);
+		}, 300);
 		setTimeout(function () {
 			for (var i = 0; i < glasses.length; i++ ) {
 				glasses[i].style.backgroundColor = "#000";
@@ -44,10 +47,10 @@ window.onload=function() {
 					eyes[i].style.backgroundColor = "#fff";
 				}
 			};
-		}, 900);
+		}, 400);
 	}
 
 
-	blink();
+	setTimeout(blink(), 500);
 
 }

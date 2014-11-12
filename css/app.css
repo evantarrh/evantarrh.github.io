@@ -3,9 +3,7 @@ html, body {
 	max-height: 100%;
 	margin: 0;
 	position: relative;
-	background-color: #666f6f !important;
-	color: #16b !important;
-	font-family: 'Asap', sans-serif !important;
+	background-color: #ccc !important;
 	text-align: center;
 }
 
@@ -13,13 +11,13 @@ html, body {
 	background-color: #000;
 }
 
-.face-wrapper {
+#face-wrapper {
 	height: 14rem;
 	width: 12rem;
 	margin: 0 auto;
 }
 
-.face-wrapper:hover {
+#face-wrapper:hover {
 	cursor: none;
 }
 
@@ -65,6 +63,7 @@ html, body {
 	background-color: #000;
 	margin: 0px;
 }
+
 .eyes {
 	display: inline-block;
 	height: 1rem;
@@ -78,6 +77,14 @@ html, body {
 	height: 1rem;
 	width: 1rem;
 	background-color: #c7b5af;
+	margin: 0px;
+}
+
+.empty {
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	background-color: rgba(0, 0, 0, 0);
 	margin: 0px;
 }
 
@@ -95,7 +102,7 @@ html, body {
 }
 
 .social > span > a {
-	color: #c2bbbb;
+	color: #5070a0;
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 1.4rem;

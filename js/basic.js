@@ -1,55 +1,109 @@
 window.onload=function() {
 
-	var faceBlocks = document.querySelectorAll('.face-row div');
-
-	for (var i = 0; i<faceBlocks.length; i++) {
- 		faceBlocks[i].style.margin = "0.15rem 0.5rem";
- 		faceBlocks[i].style.margin = "0rem";
-		faceBlocks[i].addEventListener("click", blink());
-	}
-
 	var glasses = document.querySelectorAll(".outer");
+	var innerGlasses = document.querySelectorAll(".inner");
 	var eyes = document.querySelectorAll(".eyes");
+	var face = document.getElementById("face-wrapper");
 
+	var firstDrool = document.querySelectorAll(".drool-1");
+	var secondDrool = document.querySelectorAll(".drool-2");
+	var thirdDrool = document.querySelectorAll(".drool-3");
 
+	var snoozeInterval;
+	var wakeBool = false;
+
+	face.addEventListener("click", blink, false);
 
 	function blink(){
-		console.log("blinktest");
 		setTimeout(function () {
-			for (var i = 0; i < glasses.length; i++ ) {
+			for (var i = 0; i < glasses.length; i++) {
 				glasses[i].style.backgroundColor = "#f7e7e2";
-				if (i < 4) {
-					eyes[i].style.backgroundColor = "#000";
+			}
+			for (var i = 0; i < eyes.length; i++) {
+				eyes[i].style.backgroundColor = "#000";
+			}
+			setTimeout(function () {
+				for (var i = 0; i < glasses.length; i++) {
+					glasses[i].style.backgroundColor = "#000";
 				}
-			};
-		}, 100);
-		setTimeout(function () {
-			for (var i = 0; i < glasses.length; i++ ) {
-				glasses[i].style.backgroundColor = "#000";
-				if (i < 4) {
+				for (var i = 0; i < eyes.length; i++) {
 					eyes[i].style.backgroundColor = "#fff";
 				}
-			};
+			}, 100);
 		}, 200);
+	}
+
+	function landingBlink(){
 		setTimeout(function () {
-			for (var i = 0; i < glasses.length; i++ ) {
-				glasses[i].style.backgroundColor = "#f7e7e2";
-				if (i < 4) {
-					eyes[i].style.backgroundColor = "#000";
-				}
-			};
-		}, 300);
-		setTimeout(function () {
-			for (var i = 0; i < glasses.length; i++ ) {
-				glasses[i].style.backgroundColor = "#000";
-				if (i < 4) {
-					eyes[i].style.backgroundColor = "#fff";
-				}
-			};
+			blink();
+			setTimeout(function() {
+				blink();
+				}, 200);
 		}, 400);
 	}
 
+	function snooze(){
+		wakeBool = false;
+		face.removeEventListener("click", blink, false);
+		face.addEventListener("click", wake, false);
+		setTimeout(function() {
+			for (var i = 0; i < innerGlasses.length; i++) {
+				innerGlasses[i].style.backgroundColor = "#f7e7e2";
+			}
+			for (var i = 0; i < glasses.length; i++) {
+				glasses[i].style.backgroundColor = "#f7e7e2";
+			}
+			for (var i = 0; i < eyes.length; i++) {
+				eyes[i].style.backgroundColor = "#000"
+			}
+			console.log("snoozin");
+			drool();
+			snoozeInterval = setInterval(drool, 4500);
+		}, 8000);
+	}
 
-	setTimeout(blink(), 500);
+	snooze();
+
+	function drool(){
+		setTimeout(function() {
+			if (!wakeBool) {
+				firstDrool[0].style.backgroundColor = "#e2f3f7";
+			}
+			setTimeout(function() {
+				if (!wakeBool) {
+					secondDrool[0].style.backgroundColor = "#e2f3f7";
+				}
+				setTimeout(function() {
+					if (!wakeBool) {
+						thirdDrool[0].style.backgroundColor = "#e2f3f7";
+					}
+				}, 1000);
+			}, 1000);
+		}, 1000);
+
+		resetFace();
+		console.log("drooling");
+	}
+
+	function wake(){
+		wakeBool = true;
+		face.removeEventListener("click", wake, false);
+		face.addEventListener("click", blink, false);
+		landingBlink();
+		for (var i = 0; i < innerGlasses.length; i++) {
+			innerGlasses[i].style.backgroundColor = "#000";
+		}
+		resetFace();
+		clearInterval(snoozeInterval);
+		//setTimeout(snooze, 3000);
+	}
+
+	function resetFace(){
+		firstDrool[0].style.backgroundColor = "#f7e7e2";
+		secondDrool[0].style.backgroundColor = "#f7e7e2";
+		thirdDrool[0].style.backgroundColor = "rgba(0, 0, 0, 0)";
+	}
+
+	landingBlink();
 
 }

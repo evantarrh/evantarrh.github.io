@@ -10,11 +10,14 @@ window.onload=function() {
 	var thirdDrool = document.querySelectorAll(".drool-3");
 
 	var snoozeInterval;
+	var snoozeId;
 	var wakeBool = false;
 
 	face.addEventListener("click", blink, false);
 
 	function blink(){
+		clearTimeout(snoozeId);
+		snooze();
 		setTimeout(function () {
 			for (var i = 0; i < glasses.length; i++) {
 				glasses[i].style.backgroundColor = "#f7e7e2";
@@ -43,10 +46,9 @@ window.onload=function() {
 	}
 
 	function snooze(){
-		wakeBool = false;
-		face.removeEventListener("click", blink, false);
-		face.addEventListener("click", wake, false);
-		setTimeout(function() {
+		snoozeId = setTimeout(function() {
+
+			//make face look asleep
 			for (var i = 0; i < innerGlasses.length; i++) {
 				innerGlasses[i].style.backgroundColor = "#f7e7e2";
 			}
@@ -56,15 +58,20 @@ window.onload=function() {
 			for (var i = 0; i < eyes.length; i++) {
 				eyes[i].style.backgroundColor = "#000"
 			}
-			console.log("snoozin");
+
+			//now if you click the face, it will wake()
+			wakeBool = false;
+			face.removeEventListener("click", blink, false);
+			face.addEventListener("click", wake, false);
+
 			drool();
 			snoozeInterval = setInterval(drool, 4500);
 		}, 8000);
 	}
 
-	snooze();
-
 	function drool(){
+		//wakeBool will exit the nested setTimeout, so that it doesn't keep drooling
+		//after the face has been clicked
 		setTimeout(function() {
 			if (!wakeBool) {
 				firstDrool[0].style.backgroundColor = "#e2f3f7";
@@ -82,7 +89,6 @@ window.onload=function() {
 		}, 1000);
 
 		resetFace();
-		console.log("drooling");
 	}
 
 	function wake(){
@@ -95,7 +101,7 @@ window.onload=function() {
 		}
 		resetFace();
 		clearInterval(snoozeInterval);
-		//setTimeout(snooze, 3000);
+		snooze();
 	}
 
 	function resetFace(){
@@ -105,5 +111,7 @@ window.onload=function() {
 	}
 
 	landingBlink();
+
+	snooze();
 
 }

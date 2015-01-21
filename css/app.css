@@ -94,6 +94,7 @@ html, body {
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 1.4rem;
+	text-shadow: 3px 3px #b0bbbb;
 }
 
 .social > span > a:hover, .hoveredicon {

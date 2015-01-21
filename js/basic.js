@@ -74,15 +74,15 @@ window.onload=function() {
 		//after the face has been clicked
 		setTimeout(function() {
 			if (!wakeBool) {
-				firstDrool[0].style.backgroundColor = "#e2f3f7";
+				firstDrool[0].style.backgroundColor = "#e6f7fb";
 			}
 			setTimeout(function() {
 				if (!wakeBool) {
-					secondDrool[0].style.backgroundColor = "#e2f3f7";
+					secondDrool[0].style.backgroundColor = "#e6f7fb";
 				}
 				setTimeout(function() {
 					if (!wakeBool) {
-						thirdDrool[0].style.backgroundColor = "#e2f3f7";
+						thirdDrool[0].style.backgroundColor = "#e6f7fb";
 					}
 				}, 1000);
 			}, 1000);

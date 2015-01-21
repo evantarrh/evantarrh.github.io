@@ -3,7 +3,7 @@ html, body {
 	max-height: 100%;
 	margin: 0;
 	position: relative;
-	background-color: #ccc !important;
+	background-color: #bde !important;
 	text-align: center;
 }
 
@@ -94,7 +94,7 @@ html, body {
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 1.4rem;
-	text-shadow: 5px 5px 5px #b0bbbb;
+	text-shadow: 5px 5px 5px #9bc;
 	transition: 0.15s all;
 }
 
@@ -104,7 +104,7 @@ html, body {
 	-moz-transform: translate(2px, 2px);
 	-o-transform: translate(2px, 2px);
 	transform: translate(2px, 2px);
-	text-shadow: 3px 3px 3px #9aa;
+	text-shadow: 3px 3px 3px #79a;
 }
 
 

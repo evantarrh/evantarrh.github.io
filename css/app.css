@@ -94,15 +94,17 @@ html, body {
 	text-decoration: none;
 	display: inline-block;
 	margin: 0 1.4rem;
-	text-shadow: 3px 3px #b0bbbb;
+	text-shadow: 5px 5px 5px #b0bbbb;
+	transition: 0.15s all;
 }
 
 .social > span > a:hover, .hoveredicon {
 	text-decoration: none;
-	-webkit-transform: rotate(5deg);
-	-moz-transition: rotate(5deg);
-    -o-transition: rotate(5deg);
-    transition: rotate(5deg);
+	-webkit-transform: translate(2px, 2px);
+	-moz-transform: translate(2px, 2px);
+	-o-transform: translate(2px, 2px);
+	transform: translate(2px, 2px);
+	text-shadow: 3px 3px 3px #9aa;
 }
 
 

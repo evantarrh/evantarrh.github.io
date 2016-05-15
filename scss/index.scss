@@ -1,0 +1,255 @@
+$colors: #111, #333, #555, #777, #999, #bbb, #ddd, #fff;
+$ease-function: cubic-bezier(.68,.1,.11,.99);
+
+html, body {
+  font-family: Source Code Pro;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+html, body, div {
+  margin: 0;
+  padding: 0;
+}
+
+*::selection { // hell yeah
+  background-color: #eee;
+}
+
+.links {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 20;
+
+  a {
+    border-bottom: 2px solid transparent;
+    color: white;
+    padding-bottom: 5px;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: 0.1s ease all;
+    -webkit-transition: 0.1s ease all;
+
+    &:hover:not(.active) {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 1px;
+      transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+  }
+}
+
+.nav {
+  @extend .links;
+
+  animation: nav-links 1s 2.75s both ease;
+  -webkit-animation: nav-links 1s 2.75s both ease;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  span {
+    margin: 0rem 0.5rem;
+  }
+
+  a.music {
+    &.active {
+      background-color: nth($colors, 1);
+      border: 0;
+      border-radius: 3px;
+      padding: 5px 15px;
+    }
+  }
+
+  a.code {
+    color: nth($colors, 1);
+
+    &.active {
+      background-color: #fff;
+      border: 0;
+      border-radius: 3px;
+      padding: 5px 15px;
+    }
+
+    &:hover {
+      border-bottom: 2px solid nth($colors, 1);
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid #fff;
+    opacity: 1;
+    padding-bottom: 1px;
+  }
+}
+
+.social {
+  @extend .links;
+
+  // background: #8da;
+  // background: white;
+  background: linear-gradient(to right, #777, #fff 37.5%, #111 62.5%);
+  background-size: 400%;
+  bottom: 0;
+  font-size: 1.25rem;
+  line-height: 4rem;
+  text-align: center;
+  width: 100%;
+
+  animation: social-links 1.5s 2.5s both ease;
+  -webkit-animation: social-links 1.5s 2.5s both ease;
+  // animation: animate-background-gradient 1s 3s both ease;
+  // -webkit-animation: animate-background-gradient 1s 3s both ease;
+}
+
+.letters {
+  background-color: nth($colors, 1);
+  font-size: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.letter {
+  font-size: 5rem;
+  position: absolute;
+  top: 50%;
+}
+
+div.letter-wrapper {
+  display: inline-block;
+  font-size: 1rem;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: skew(10deg);
+  -ms-transform: skew(10deg);
+  -webkit-transform: skew(10deg);
+  vertical-align: top;
+  width: 12.5%;
+
+  &:first-child {
+    background-color: nth($colors, 1);
+    z-index: 17;
+  }
+
+  &:last-child {
+    animation: right-bg 1.6s 0.4s both ease;
+    -webkit-animation: right-bg 1.6s 0.4s both ease;
+    background-color: #fff;
+    position: absolute;
+    right: -190px; // i'm sorry
+    width: 200px;
+  }
+}
+
+@for $i from 2 through length($colors) {
+  .letter-wrapper:nth-child(#{length($colors)}n + #{$i}) {
+    // ex: block-4, 0.8s (duration), 0.25s (delay), both, ease
+    animation: block-#{$i} #{$i * 0.2}s #{$i * .05}s both ease;
+    -webkit-animation: block-#{$i} #{$i * 0.2}s #{$i * .05}s both ease;
+    background-color: nth($colors, $i);
+    height: 100%;
+    width: 12.5%;
+    z-index: 16 - ($i * 2);
+
+    .letter {
+      color: nth($colors, 9 - $i);
+      z-index: 17 - ($i * 2);
+    }
+  }
+}
+
+.letter {
+  animation: letter 1s 1s both ease;
+  -webkit-animation: letter 1s 1s both ease;
+}
+
+@keyframes letter {
+  0% {
+    opacity: 0;
+    transform: skew(-10deg) translate3d(-80px, -50%, 0);
+    -webkit-transform: skew(-10deg) translate3d(-80px, -50%, 0);
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  36% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: skew(-10deg) translate3d(-25px, -50%, 0);
+    -webkit-transform: skew(-10deg) translate3d(-25px, -50%, 0);
+  }
+
+  100% {
+    transform: skew(-10deg) translate3d(-22px, -50%, 0);
+    -webkit-transform: skew(-10deg) translate3d(-22px, -50%, 0);
+  }
+}
+
+@for $i from 1 through length($colors) {
+  @keyframes block-#{$i} {
+    0% { background-color: nth($colors, 2);
+         transform: skew(10deg) translate3d(#{10 * $i}px, 0, 0);
+         -webkit-transform: skew(10deg) translate3d(#{10 * $i}px, 0, 0);
+    }
+    75% { background-color: nth($colors, $i); }
+    100% { transform: skew(10deg) translate3d(0, 0, 0);
+          -webkit-transform: skew(10deg) translate3d(0, 0, 0);
+    }
+  }
+}
+
+@keyframes right-bg {
+  0% { background: nth($colors, 2) }
+  75% { background: nth($colors, 8) }
+  100% { background: nth($colors, 8) }
+}
+
+@keyframes nav-links {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes social-links {
+  0% { transform: translate3d(0, 100%, 0); background-position: 25% 50%; opacity: 0.5}
+  50% { transform: translate3d(0, 0, 0); }
+  100% { background-position: 50% 50%; opacity: 1}
+}
+
+@keyframes link-hover {
+  0% { padding-bottom: 5px; border-bottom: 2px solid transparent }
+  100% { padding-bottom: 1px; border-bottom: 2px solid #fff }
+}
+
+@keyframes shrink-letters {
+  0% { height: 100%; }
+  100% { height: 50%; }
+}
+
+@media(max-width: 480px) {
+  html, body {
+    font-size: 12px;
+  }
+
+  .social {
+    font-size: 1.25rem;
+  }
+
+  .nav {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,60 @@
+@import 'base';
+@import 'colors';
+
+
+.nav {
+  @extend .links;
+
+  animation: nav-links 1s 2.75s both ease;
+  -webkit-animation: nav-links 1s 2.75s both ease;
+  font-family: Source Code Pro;
+  left: 50%;
+  top: 2rem;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  span {
+    margin: 0rem 0.5rem;
+  }
+
+  a {
+    color: nth($colors, 1);
+    margin: 5px 15px;
+
+    &.active {
+      background-color: nth($colors, 1);
+      border: 0;
+      border-radius: 3px;
+      color: #fff;
+      margin: 0;
+      padding: 5px 15px;
+    }
+
+    &:hover:not(.active) {
+      border-bottom: 2px solid nth($colors, 1);
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid #fff;
+    opacity: 1;
+    padding-bottom: 1px;
+  }
+
+  &.code-nav {
+    a {
+      color: $warm-gray;
+
+      &.active {
+        background-color: $warm-gray;
+        color: #fff;
+      }
+
+      &:hover:not(.active) {
+        border-bottom: 2px solid $warm-gray;
+      }
+    }
+  }
+}
+

@@ -1,95 +1,10 @@
-$colors: #111, #333, #555, #777, #999, #bbb, #ddd, #fff;
+@import 'colors';
+@import 'base';
+@import 'nav';
 $ease-function: cubic-bezier(.68,.1,.11,.99);
 
 html, body {
   font-family: Source Code Pro;
-  height: 100%;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-html, body, div {
-  margin: 0;
-  padding: 0;
-}
-
-*::selection { // hell yeah
-  background-color: #eee;
-}
-
-.links {
-  color: #fff;
-  font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  z-index: 20;
-
-  a {
-    border-bottom: 2px solid transparent;
-    color: white;
-    padding-bottom: 5px;
-    margin: 0 1rem;
-    text-decoration: none;
-    transition: 0.1s ease all;
-    -webkit-transition: 0.1s ease all;
-
-    &:hover:not(.active) {
-      border-bottom: 2px solid #fff;
-      padding-bottom: 1px;
-      transition: 0.2s ease all;
-      -webkit-transition: 0.2s ease all;
-    }
-  }
-}
-
-.nav {
-  @extend .links;
-
-  animation: nav-links 1s 2.75s both ease;
-  -webkit-animation: nav-links 1s 2.75s both ease;
-  left: 50%;
-  top: 2rem;
-  transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-
-  span {
-    margin: 0rem 0.5rem;
-  }
-
-  a.music {
-    &.active {
-      background-color: nth($colors, 1);
-      border: 0;
-      border-radius: 3px;
-      padding: 5px 15px;
-    }
-  }
-
-  a.code {
-    color: nth($colors, 1);
-
-    &.active {
-      background-color: #fff;
-      border: 0;
-      border-radius: 3px;
-      padding: 5px 15px;
-    }
-
-    &:hover {
-      border-bottom: 2px solid nth($colors, 1);
-    }
-  }
-
-  .active {
-    border-bottom: 2px solid #fff;
-    opacity: 1;
-    padding-bottom: 1px;
-  }
 }
 
 .social {

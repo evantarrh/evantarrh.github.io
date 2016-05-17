@@ -1,5 +1,4 @@
 html, body {
-  font-family: Source Code Pro;
   height: 100%;
   position: relative;
   width: 100%;
@@ -35,9 +34,66 @@ html, body, div {
       transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all; }
 
+.animating {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000; }
+
+html, body {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+html, body, div {
+  margin: 0;
+  padding: 0; }
+
+*::selection {
+  background-color: #eee; }
+
+.links, .nav, .social {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 20; }
+  .links a, .nav a, .social a {
+    border-bottom: 2px solid transparent;
+    color: white;
+    padding-bottom: 5px;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: 0.1s ease all;
+    -webkit-transition: 0.1s ease all; }
+    .links a:hover:not(.active), .nav a:hover:not(.active), .social a:hover:not(.active) {
+      border-bottom: 2px solid #fff;
+      padding-bottom: 1px;
+      transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all; }
+
+.animating {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000; }
+
 .nav {
   animation: nav-links 1s 2.75s both ease;
   -webkit-animation: nav-links 1s 2.75s both ease;
+  font-family: Source Code Pro;
   left: 50%;
   top: 2rem;
   transform: translateX(-50%);
@@ -45,24 +101,32 @@ html, body, div {
   -webkit-transform: translateX(-50%); }
   .nav span {
     margin: 0rem 0.5rem; }
-  .nav a.music.active {
-    background-color: #111;
-    border: 0;
-    border-radius: 3px;
-    padding: 5px 15px; }
-  .nav a.code {
-    color: #111; }
-    .nav a.code.active {
-      background-color: #fff;
+  .nav a {
+    color: #111;
+    margin: 5px 15px; }
+    .nav a.active {
+      background-color: #111;
       border: 0;
       border-radius: 3px;
+      color: #fff;
+      margin: 0;
       padding: 5px 15px; }
-    .nav a.code:hover {
+    .nav a:hover:not(.active) {
       border-bottom: 2px solid #111; }
   .nav .active {
     border-bottom: 2px solid #fff;
     opacity: 1;
     padding-bottom: 1px; }
+  .nav.code-nav a {
+    color: #445; }
+    .nav.code-nav a.active {
+      background-color: #445;
+      color: #fff; }
+    .nav.code-nav a:hover:not(.active) {
+      border-bottom: 2px solid #445; }
+
+html, body {
+  font-family: Source Code Pro; }
 
 .social {
   background: linear-gradient(to right, #777, #fff 37.5%, #111 62.5%);

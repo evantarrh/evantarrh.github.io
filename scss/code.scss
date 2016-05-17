@@ -1,0 +1,95 @@
+@import 'colors';
+@import 'base';
+@import 'nav';
+
+html, body {
+  font-family: Roboto Condensed;
+}
+
+body {
+  @extend .animating;
+
+  animation: background-gradient 8s ease infinite;
+  -webkit-animation: background-gradient 8s ease infinite;
+  // background: linear-gradient(270deg, #4FFCEF, #EA5CF5, #eff46f, #fb424d);
+  background: linear-gradient(270deg, #FFFCEF, #EAFCF5, #eff4ff, #fbf2fd);
+  background-size: 400% 400%;
+  box-shadow: inset 0 0 50px 2px #fcfcfc, inset 2px 2px 200px 20px #f6f6f6;
+  position: relative;
+}
+
+.nav {
+  @extend .animating;
+
+  animation: fade-in 1s ease both;
+  -webkit-animation: fade-in 1s ease both;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.statement {
+  @extend .animating;
+
+  animation: fade-in-scale 1s 0.25s ease both;
+  -webkit-animation: fade-in-scale 1s 0.25s ease both;
+  color: $warm-gray;
+  font-size: 2rem;
+  left: 50%;
+  letter-spacing: 0.5px;
+  line-height: 1.42;
+  max-width: 640px;
+  position: absolute;
+  top: 50%;
+  width: 80%;
+
+  a {
+    border-bottom: 2px solid;
+    color: #dad;
+    padding-bottom: 1px;
+    text-decoration: none;
+
+    &:hover {
+      border-bottom: 4px solid;
+      padding-bottom: 0;
+    }
+  }
+}
+
+@keyframes background-gradient {
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
+}
+
+@-webkit-keyframes background-gradient {
+  0%{ background-position:0% 50%; }
+  50%{ background-position:100% 50%; }
+  100%{ background-position:0% 50%; }
+}
+
+
+@keyframes fade-in {
+  0%{ opacity: 0; }
+  100%{ opacity: 1; }
+}
+
+@keyframes fade-in-scale {
+  0%{ opacity: 0; transform: scale(0.98) translate3d(-51%, -51%, 0); }
+  100%{ opacity: 1; transform: scale(1) translate3d(-50%, -50%, 0); }
+}
+
+@media (max-width: 540px) {
+  .statement {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .statement {
+    font-size: 1.25rem;
+  }
+}

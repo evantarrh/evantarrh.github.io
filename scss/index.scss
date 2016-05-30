@@ -5,6 +5,10 @@ $ease-function: cubic-bezier(.68,.1,.11,.99);
 
 html, body {
   font-family: Source Code Pro;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .social {

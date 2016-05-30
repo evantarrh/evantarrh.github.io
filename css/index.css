@@ -1,9 +1,3 @@
-html, body {
-  height: 100%;
-  position: relative;
-  width: 100%;
-  overflow: hidden; }
-
 html, body, div {
   margin: 0;
   padding: 0; }
@@ -43,12 +37,6 @@ html, body, div {
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000; }
-
-html, body {
-  height: 100%;
-  position: relative;
-  width: 100%;
-  overflow: hidden; }
 
 html, body, div {
   margin: 0;
@@ -126,7 +114,11 @@ html, body, div {
       border-bottom: 2px solid #445; }
 
 html, body {
-  font-family: Source Code Pro; }
+  font-family: Source Code Pro;
+  height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
 
 .social {
   background: linear-gradient(to right, #777, #fff 37.5%, #111 62.5%);

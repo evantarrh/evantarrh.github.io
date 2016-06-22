@@ -1,0 +1,10 @@
+meta:
+  description: "I'm on the Web!"
+  facebook_image: ""  # /img/facebook.png
+  twitter_image: ""  # /img/twitter.png
+  image: ""  # /img/share.png
+  twitter_handle: "@evantarrh"  # @minimill_co
+  domain: "evan.land"  # minimill.co
+  url: "http://evan.land"  # https://minimill.co
+  google_analytics_id: "UA-50221324-1" # UA-66637918-1
+  theme_color: "#F9F9F9" # #FFFFFF

@@ -1,6 +1,8 @@
 @import 'colors';
 @import 'base';
 @import 'nav';
+@import 'code';
+
 $ease-function: cubic-bezier(.68,.1,.11,.99);
 
 html, body {
@@ -8,7 +10,14 @@ html, body {
   height: 100%;
   position: relative;
   width: 100%;
-  overflow: hidden;
+
+  &.home {
+    overflow: hidden;
+  }
+}
+
+body {
+  min-height: 100%;
 }
 
 .social {

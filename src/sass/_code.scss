@@ -2,15 +2,6 @@
 @import 'base';
 @import 'nav';
 
-html, body {
-  font-family: Roboto Condensed;
-  height: 100%;
-}
-
-body {
-  min-height: 100%;
-}
-
 .nice-background {
   @extend .animating;
   animation: background-gradient 8s ease infinite;
@@ -28,7 +19,6 @@ body {
 
   animation: fade-in 1s ease both;
   -webkit-animation: fade-in 1s ease both;
-  position: relative;
 }
 
 .statement {
@@ -37,6 +27,7 @@ body {
   animation: fade-in-scale 1s 0.25s ease both;
   -webkit-animation: fade-in-scale 1s 0.25s ease both;
   color: $warm-gray;
+  font-family: Roboto Condensed;
   font-size: 2rem;
   letter-spacing: 0.5px;
   line-height: 1.42;

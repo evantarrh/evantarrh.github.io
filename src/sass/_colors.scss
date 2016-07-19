@@ -1,2 +1,15 @@
-$colors: #111, #333, #555, #777, #999, #bbb, #ddd, #fff;
+$black: #111;
+$white: #fff;
+
 $warm-gray: #445;
+$light-gray: #ccc;
+
+$oneline-colors: #111, #333, #555, #777, #999, #bbb, #ddd, #fff;
+
+$project-colors: (
+  jade: #42cbad,
+  bruhzzfeed: #f53,
+  density: #2285c6,
+  ql: #bbc,
+  talks: #59acff
+);

@@ -23,8 +23,6 @@ body {
 .social {
   @extend .links;
 
-  // background: #8da;
-  // background: white;
   background: linear-gradient(to right, #777, #fff 37.5%, #111 62.5%);
   background-size: 400%;
   bottom: 0;
@@ -34,13 +32,10 @@ body {
   width: 100%;
 
   animation: social-links 1.5s 2.5s both ease;
-  -webkit-animation: social-links 1.5s 2.5s both ease;
-  // animation: animate-background-gradient 1s 3s both ease;
-  // -webkit-animation: animate-background-gradient 1s 3s both ease;
 }
 
 .letters {
-  background-color: nth($colors, 1);
+  background-color: nth($oneline-colors, 1);
   font-size: 0;
   height: 100%;
   width: 100%;
@@ -60,19 +55,16 @@ div.letter-wrapper {
   padding: 0;
   position: relative;
   transform: skew(10deg);
-  -ms-transform: skew(10deg);
-  -webkit-transform: skew(10deg);
   vertical-align: top;
   width: 12.5%;
 
   &:first-child {
-    background-color: nth($colors, 1);
+    background-color: nth($oneline-colors, 1);
     z-index: 17;
   }
 
   &:last-child {
     animation: right-bg 1.6s 0.4s both ease;
-    -webkit-animation: right-bg 1.6s 0.4s both ease;
     background-color: #fff;
     position: absolute;
     right: -190px; // i'm sorry
@@ -80,18 +72,17 @@ div.letter-wrapper {
   }
 }
 
-@for $i from 2 through length($colors) {
-  .letter-wrapper:nth-child(#{length($colors)}n + #{$i}) {
-    // ex: block-4, 0.8s (duration), 0.25s (delay), both, ease
+@for $i from 2 through length($oneline-colors) {
+  .letter-wrapper:nth-child(#{length($oneline-colors)}n + #{$i}) {
     animation: block-#{$i} #{$i * 0.2}s #{$i * .05}s both ease;
     -webkit-animation: block-#{$i} #{$i * 0.2}s #{$i * .05}s both ease;
-    background-color: nth($colors, $i);
+    background-color: nth($oneline-colors, $i);
     height: 100%;
     width: 12.5%;
     z-index: 16 - ($i * 2);
 
     .letter {
-      color: nth($colors, 9 - $i);
+      color: nth($oneline-colors, 9 - $i);
       z-index: 17 - ($i * 2);
     }
   }
@@ -128,13 +119,13 @@ div.letter-wrapper {
   }
 }
 
-@for $i from 1 through length($colors) {
+@for $i from 1 through length($oneline-colors) {
   @keyframes block-#{$i} {
-    0% { background-color: nth($colors, 2);
+    0% { background-color: nth($oneline-colors, 2);
          transform: skew(10deg) translate3d(#{10 * $i}px, 0, 0);
          -webkit-transform: skew(10deg) translate3d(#{10 * $i}px, 0, 0);
     }
-    75% { background-color: nth($colors, $i); }
+    75% { background-color: nth($oneline-colors, $i); }
     100% { transform: skew(10deg) translate3d(0, 0, 0);
           -webkit-transform: skew(10deg) translate3d(0, 0, 0);
     }
@@ -142,9 +133,9 @@ div.letter-wrapper {
 }
 
 @keyframes right-bg {
-  0% { background: nth($colors, 2) }
-  75% { background: nth($colors, 8) }
-  100% { background: nth($colors, 8) }
+  0% { background: nth($oneline-colors, 2) }
+  75% { background: nth($oneline-colors, 8) }
+  100% { background: nth($oneline-colors, 8) }
 }
 
 @keyframes nav-links {

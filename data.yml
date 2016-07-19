@@ -1,5 +1,5 @@
 meta:
-  description: "I'm on the Web!"
+  description: "Evan is on the Web!"
   facebook_image: ""  # /img/facebook.png
   twitter_image: ""  # /img/twitter.png
   image: ""  # /img/share.png
@@ -8,3 +8,120 @@ meta:
   url: "http://evan.land"  # https://minimill.co
   google_analytics_id: "UA-50221324-1" # UA-66637918-1
   theme_color: "#F9F9F9" # #FFFFFF
+
+projects:
+  -
+    title: "From Zero To Website"
+    url: "/jade"
+    url-text: "See it live"
+    github: "https://github.com/evantarrh/jade"
+    skills:
+      - "Design"
+      - "Front-end"
+      - "Teaching"
+    tools:
+      -
+        text: "Gulp.js"
+        url: "http://gulpjs.com/"
+      -
+        text: "Handlebars.js"
+        url: "http://handlebarsjs.com/"
+      -
+        text: "Sass"
+        url: "http://sass-lang.com/"
+    description: 'In January 2016, I designed and taught a week-long beginner
+      web development course for <a href="https://adicu.com/jade">JADE</a>,
+      an immersive program for 16 first-year Columbia and Barnard students
+      interested in app development and entrepreneurship. '
+    class-name: "jade"
+  -
+    title: "Bruhzzfeed"
+    url: "http://bruhhh.co"
+    url-text: "See it live"
+    github: "https://github.com/evantarrh/bruhzzfeed"
+    skills:
+      - "Design"
+      - "Front-end"
+      - "Back-end"
+      - "DevOps"
+    tools:
+      -
+        text: "Flask"
+        url: "http://flask.pocoo.org/"
+      -
+        text: "MongoDB"
+        url: "https://mongodb.com/"
+      -
+        text: "Clarifai API"
+        url: "https://clarifai.com/"
+      -
+        text: "NLTK"
+        url: "http://www.nltk.org/"
+      -
+        text: "Imgur API"
+        url: "https://imgur.com"
+      -
+        text: "Heroku"
+        url: "https://heroku.com"
+    description: 'An award-winning fall 2015 HackNY project: uses the Clarifai API
+      to tag popular images from Imgur and then uses NLTK to generate titles
+      for Buzzfeed-style listicles, like <a href="http://www.bruhhh.co/q9uIQ1">
+      13 Animals Whose 2015 Was More Inspiring Than Yours</a>.'
+    class-name: "bruhzzfeed"
+  -
+    title: "Density"
+    url: "http://density.adicu.com"
+    url-text: "See it live"
+    github: "https://github.com/ADI-Labs/density"
+    skills:
+      - "Front-end"
+      - "Mentorship"
+    tools:
+      -
+        text: "Javascript"
+        url: "http://vanilla-js.com/"
+      -
+        text: "Flask"
+        url: "http://flask.pocoo.org/"
+    description: 'As a member and mentor of <a href="adicu.com/labs">ADI Labs</a>
+      at Columbia, I helped develop a tool that uses wireless router data on campus
+      to estimate how full each library is at any given time.'
+    class-name: "density"
+  -
+    title: "QL"
+    url: "https://github.com/mayankmahajan24/QL"
+    url-text: "Github"
+    skills:
+      - "Testing"
+      - "Language design"
+      - "Functional programming"
+    description: 'In my compilers class, I worked on a team of five to build QL,
+      a query language for JSON. Using data from CitiBike and Fitbit, we were
+      able to make some interesting programs with our language&mdash;like
+      <a href="https://github.com/mayankmahajan24/QL/blob/master/tests/integration-4.ql"
+      >finding the average speed of CitiBike users</a> and
+      <a href="https://github.com/mayankmahajan24/QL/blob/master/tests/integration-4.ql"
+      >showing that my stride length is longest on weekends</a>.'
+    class-name: "ql"
+  -
+    title: "Talks"
+    skills:
+      - "Teaching"
+      - "Design"
+      - "Talking (lol)"
+    description:
+      - 'I&apos;ve always loved teaching! Columbia tends to focus on the theoretical
+        side of CS rather than industry skills, so giving talks is a great way
+        to share practical knowledge with other talented programmers.'
+    extra-links:
+      -
+        text: "Collaborating with Git"
+        url: "/pdf/collaborating_with_git.pdf"
+      -
+        text: "Introduction to Sass"
+        url: "/pdf/intro_to_sass.pdf"
+      -
+        text: "Building a Personal Site"
+        url: "/pdf/personal_sites.pdf"
+    class-name: "talks"
+ # Future: wiki ipsum

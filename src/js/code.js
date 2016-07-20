@@ -1,19 +1,32 @@
 $(document).ready(function() {
-  $('.title').mouseenter(function(e) {
-    $(this).toggleClass('hover-fx');
-  }).mouseleave(function(e) {
-    $(this).toggleClass('hover-fx');
+  $('.title').on({
+    'mouseenter': function(e) {
+      $(this).toggleClass('hover-fx');
+    },
+    'mouseleave' : function(e) {
+      $(this).toggleClass('hover-fx');
+    }
   });
 
-  var colors = {
-    'jade': '#42cbad',
-    'bruhzzfeed': '#e32'
-  };
+  $('.to-projects').on({
+    'mouseenter': function(e) {
+      $('#project-section-link').toggleClass('hover-fx');
+    },
+    'mouseleave': function(e) {
+      $('#project-section-link').toggleClass('hover-fx');
+    }
+  });
+
+  $('#project-section-link, .to-projects').click(function(e) {
+    $('html, body').animate({
+        scrollTop: $('#jade').parent().offset().top
+    }, 600);
+  });
 
   function focusProject() {
-    $('.project-wrapper').each(function(idx) {
-      var distanceFromViewportTop = $(this)[0].getBoundingClientRect().top;
-      var project = $(this)[0].children[0];
+    $('.project-wrapper').each(function(idx, projectWrapper) {
+      var distanceFromViewportTop = projectWrapper.getBoundingClientRect().top;
+      var project = $(projectWrapper).find('.project')[0];
 
       if (distanceFromViewportTop >= -200 &&
           distanceFromViewportTop < window.innerHeight - 200) {
@@ -24,20 +37,8 @@ $(document).ready(function() {
     });
   }
 
-  $(document).scroll(focusProject);
-
-  $('#project-section-link, .to-projects').click(function(e) {
-    $('html, body').animate({
-        scrollTop: $('#jade').parent().offset().top
-    }, 600);
-  });
-
-  $('.to-projects').mouseenter(function(e) {
-    $('#project-section-link').toggleClass('hover-fx');
-  }).mouseleave(function(e) {
-    $('#project-section-link').toggleClass('hover-fx');
-  });
-
+  // Init:
   focusProject();
+  $(document).scroll(focusProject);
   $('#project-section-link').removeClass('hover-fx');
 });

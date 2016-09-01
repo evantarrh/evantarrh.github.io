@@ -65,8 +65,8 @@ projects:
         url: "https://heroku.com"
     description: 'An award-winning fall 2015 HackNY project: uses the Clarifai API
       to tag popular images from Imgur and then uses NLTK to generate titles
-      for Buzzfeed-style listicles, like <a href="http://www.bruhhh.co/q9uIQ1">
-      13 Animals Whose 2015 Was More Inspiring Than Yours</a>.'
+      for Buzzfeed-style listicles, like <a href="http://www.bruhhh.co/iCHjcK">
+      These 23 Cute Mammals Will Make You Go Wow</a>.'
     class-name: "bruhzzfeed"
   -
     title: "Density"

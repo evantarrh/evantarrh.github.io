@@ -36,7 +36,7 @@ projects:
     class-name: "jade"
   -
     title: "Bruhzzfeed"
-    url: "http://bruhhh.co"
+    url: "http://bruhhh.herokuapp.com"
     url-text: "See it live"
     github: "https://github.com/evantarrh/bruhzzfeed"
     skills:
@@ -65,7 +65,7 @@ projects:
         url: "https://heroku.com"
     description: 'An award-winning fall 2015 HackNY project: uses the Clarifai API
       to tag popular images from Imgur and then uses NLTK to generate titles
-      for Buzzfeed-style listicles, like <a href="http://www.bruhhh.co/iCHjcK">
+      for Buzzfeed-style listicles, like <a href="http://www.bruhhh.herokuapp.com/iCHjcK">
       These 23 Cute Mammals Will Make You Go Wow</a>.'
     class-name: "bruhzzfeed"
   -

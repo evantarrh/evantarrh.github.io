@@ -19,7 +19,7 @@ $(document).ready(function() {
 
   $('#project-section-link, .to-projects').click(function(e) {
     $('html, body').animate({
-        scrollTop: $('#jade').parent().offset().top
+        scrollTop: $('#devfest').parent().offset().top
     }, 600);
   });
 

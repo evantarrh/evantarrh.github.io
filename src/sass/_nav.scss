@@ -19,11 +19,11 @@
   }
 
   a {
-    color: nth($colors, 1);
+    color: nth($oneline-colors, 1);
     margin: 5px 15px;
 
     &.active {
-      background-color: nth($colors, 1);
+      background-color: nth($oneline-colors, 1);
       border: 0;
       border-radius: 3px;
       color: #fff;
@@ -32,7 +32,7 @@
     }
 
     &:hover:not(.active) {
-      border-bottom: 2px solid nth($colors, 1);
+      border-bottom: 2px solid nth($oneline-colors, 1);
     }
   }
 

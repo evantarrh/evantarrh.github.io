@@ -11,6 +11,31 @@ meta:
 
 projects:
   -
+    title: "DevFest"
+    url: "https://devfe.st/"
+    url-text: "See it live"
+    github: "https://github.com/adicu/2017.devfe.st/"
+    skills:
+      - "Design"
+      - "Front-end"
+      - "DevOps"
+    tools:
+      -
+        text: "Gulp.js"
+        url: "http://gulpjs.com/"
+      -
+        text: "Handlebars.js"
+        url: "http://handlebarsjs.com/"
+      -
+        text: "Sass"
+        url: "http://sass-lang.com/"
+      -
+        text: "NGINX"
+        url: "https://www.nginx.com/resources/wiki/"
+    description: "After helping organize Columbia's biggest hackathon for a few years,
+              this year I designed and developed the website from scratch."
+    class-name: "devfest"
+  -
     title: "From Zero To Website"
     url: "/jade"
     url-text: "See it live"
@@ -32,7 +57,7 @@ projects:
     description: 'In January 2016, I designed and taught a week-long beginner
       web development course for <a href="https://adicu.com/jade">JADE</a>,
       an immersive program for 16 first-year Columbia and Barnard students
-      interested in app development and entrepreneurship. '
+      interested in app development and entrepreneurship.'
     class-name: "jade"
   -
     title: "Bruhzzfeed"

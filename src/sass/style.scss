@@ -20,6 +20,42 @@ body {
   min-height: 100%;
 }
 
+footer {
+  height: auto !important;
+  padding: 4rem 0 4rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.2s ease all;
+  width: 100%;
+
+  p {
+    color: #667;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+    line-height: 2;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  a {
+    border-bottom: 2px solid transparent;
+    color: $warm-gray;
+    font-size: 1rem;
+    padding-bottom: 5px;
+    text-decoration: none;
+    transition: 0.2s ease all;
+
+    .letterspacing-fix {
+      letter-spacing: normal;
+    }
+
+    &:hover, &.hover-fx {
+      border-bottom: 2px solid $warm-gray;
+      padding-bottom: 1px;
+    }
+  }
+}
+
 .social {
   @extend .links;
 

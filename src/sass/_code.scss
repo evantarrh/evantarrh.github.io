@@ -8,10 +8,13 @@
   -webkit-animation: background-gradient 8s ease infinite;
   background: linear-gradient(270deg, #FFFCEF, #EAFCF5, #eff4ff, #fbf2fd);
   background-size: 400% 400%;
-  height: 650px;
-  min-height: 100vh;
   position: relative;
   width: 100%;
+
+  &.main-bg {
+    height: 650px;
+    min-height: 100vh;
+  }
 }
 
 .nav {
@@ -252,6 +255,7 @@ h3 {
 h3 a {
   color: $black;
   text-decoration: none;
+  text-shadow: 0 0 15px $white;
 
   &:after {
     border-radius: 2px;
@@ -268,6 +272,7 @@ h3 a {
   }
 
   &.hover-fx {
+    color: lighten($black, 10%);
     cursor: pointer;
 
     &:after {

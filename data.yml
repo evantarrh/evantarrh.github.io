@@ -12,7 +12,7 @@ meta:
 projects:
   -
     title: "DevFest"
-    url: "https://devfe.st/"
+    url: "https://2017.devfe.st/"
     url-text: "See it live"
     github: "https://github.com/adicu/2017.devfe.st/"
     skills:
@@ -33,7 +33,7 @@ projects:
         text: "NGINX"
         url: "https://www.nginx.com/resources/wiki/"
     description: "After helping organize Columbia's biggest hackathon for a few years,
-              this year I designed and developed the website from scratch."
+              in 2017 I designed and developed the website from scratch."
     class-name: "devfest"
   -
     title: "From Zero To Website"

@@ -64,6 +64,19 @@
   }
 }
 
+.statement-new {
+  @extend .animating;
+
+  animation: fade-in 1s ease both;
+  -webkit-animation: fade-in 1s ease both;
+
+  font-family: Source Code Pro;
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: 4rem;
+  color: $warm-gray;
+}
+
 .to-projects {
   background-color: rgba(255,255,255,0);
   bottom: 0;

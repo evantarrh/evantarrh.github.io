@@ -1,0 +1,104 @@
+{{#extend "base"}}
+
+{{#content "scripts" mode="prepend"}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+{{/content}}
+
+{{#content "title" mode="prepend"}}
+| evan codes
+{{/content}}
+
+{{#content "main" mode="prepend"}}
+    <div class="nice-background main-bg">
+      <div class="nav code-nav">
+        <a class="code active" href="/">Code</a>
+        <span></span>
+        <a class="music" href="https://luckbox.bandcamp.com">Music</a>
+      </div>
+      <div class="statement">
+        <p>Hi! I&apos;m <a href="https://twitter.com/evantarrh">Evan</a>. Right now, I work at <a href="https://lyft.com">Lyft</a> as a software engineer, and I produce a mix of jazz and electronic music (check out my debut <a href="https://luckbox.bandcamp.com">EP</a>!)</p>
+
+        <p>If you&apos;re in New York and want to chat or play some music, <a href="mailto:evantarrh@gmail.com">send me an email</a>!</p>
+      </div>
+
+      <div class="to-projects">
+        <p>click or scroll for</p>
+        <a href="#" id="project-section-link">Project<span class="letterspacing-fix">s</span></a>
+      </div>
+    </div>
+
+    <!-- <div class="project-section-header">
+      <p>click or scroll for</p>
+      <a href="#" id="project-section-link">Project<span class="letterspacing-fix">s</span></a>
+    </div> -->
+
+  {{#each projects}}
+    <div class="project-wrapper {{this.class-name}}">
+      <div class="project {{this.class-name}}" id="{{this.class-name}}">
+        <div class="project-content">
+          {{#if this.url}}
+            <h3><a target="_blank" href="{{this.url}}" class="title">{{this.title}}</a></h3>
+          {{else}}
+            <h3>{{this.title}}</h3>
+          {{/if}}
+
+
+          <div class="skills button-list">
+            <div class="label"><span>Skills</span></div>
+            <ul>
+              {{#each this.skills}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+          </div>
+
+          {{#if this.tools}}
+            <div class="tools button-list">
+              <div class="label"><span>Tools</span></div>
+              <ul>
+                {{#each this.tools}}
+                  <li><a target="_blank" class="link" href="{{this.url}}">{{this.text}}</a></li>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+
+
+          <div class="description">
+            <div class="label"><span>Project</span></div>
+            <p>
+              {{{this.description}}}
+            </p>
+          </div>
+
+          <div class="project-links button-list">
+            <div class="label"><span>Links</span></div>
+            <ul>
+              {{#if this.github}}
+                <li><a target="_blank" class="link" href="{{this.github}}">Github</a></li>
+              {{/if}}
+              {{#if this.url}}
+                <li><a target="_blank" class="link" href="{{this.url}}">{{this.url-text}}</a></li>
+              {{/if}}
+              {{#if this.extra-links}}
+                {{#each this.extra-links}}
+                  <li><a target="_blank" class="link" href="{{this.url}}">{{this.text}}</a></li>
+                {{/each}}
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+  {{/each}}
+
+  <footer class="nice-background">
+    <p>
+      I made this! Code on <a href="https://github.com/evantarrh/evantarrh.github.io">Github</a>. <a href="https://twitter.com/evantarrh">Tweet me</a> sometime.
+    </p>
+  </footer>
+
+  <script src="../js/code.js" type="text/javascript"></script>
+{{/content}}
+
+{{/extend}}

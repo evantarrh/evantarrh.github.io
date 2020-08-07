@@ -108,6 +108,56 @@ div.letter-wrapper {
   }
 }
 
+.ev {
+  height: 10rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.corner-link {
+  @extend .links;
+  width: auto;
+  font-size: 0.8rem;
+
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: 1rem;
+
+  a {
+    text-decoration: none;
+    color: $neutral-gray;
+
+    &.active {
+      background-color: $neutral-gray;
+      color: #fff;
+    }
+
+    &:hover:not(.active) {
+      border-bottom: 1px solid $neutral-gray;
+    }
+  }
+}
+
+.gem {
+  // do this in HTML to make relative path work
+  // background: url(img/gem_med.png);
+  display: inline-block;
+  background-size: cover;
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  margin: 0 1.5rem;
+  transform: translateY(20%);
+}
+
 @for $i from 2 through length($oneline-colors) {
   .letter-wrapper:nth-child(#{length($oneline-colors)}n + #{$i}) {
     animation: block-#{$i} #{$i * 0.2}s #{$i * .05}s both ease;

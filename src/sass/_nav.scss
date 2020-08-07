@@ -5,8 +5,8 @@
 .nav {
   @extend .links;
 
-  animation: nav-links 1s 2.75s both ease;
-  -webkit-animation: nav-links 1s 2.75s both ease;
+  // animation: nav-links 5s 0s both ease;
+  // -webkit-animation: nav-links 5s 0s both ease;
   font-family: Source Code Pro;
   left: 50%;
   top: 3rem;
@@ -56,5 +56,12 @@
       }
     }
   }
+}
+
+.centered-nav {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  position: relative !important;
 }
 

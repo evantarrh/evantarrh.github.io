@@ -1,0 +1,287 @@
+@import 'colors';
+
+$text-color: #557;
+$text-content-max-width: 600px;
+
+@mixin text-link {
+  color: $text-color;
+  border-bottom: 2px solid $text-color;
+  text-decoration: none;
+  padding-bottom: 1px;
+
+  &:hover {
+    border-bottom: 2px dotted $text-color;
+  }
+}
+
+*::selection { // hell yeah
+  background-color: #fcc;
+}
+
+.folio-header {
+  font-family: Epilogue;
+  text-align: center;
+  overflow: auto;
+  background-image: url(../img/folio_icon_2.png);
+  background-size: 100px;
+  background-position: 25px 0;
+  background-repeat: repeat;
+
+  h1 {
+    display: inline-block;
+    background-color: rgba(255,255,255,0.8);
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5rem 0;
+    text-shadow: 6px 2px 0px #fcc, -6px -2px #ccf;
+  }
+}
+
+.folio-section {
+	display: flex;
+  align-items: stretch;
+	font-family: Epilogue;
+  max-width: 100%;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.folio-section-one {
+  width: 20rem;
+	min-width: 20rem;
+	text-align: right;
+  color: #fff;
+  text-shadow: 3px 1px 0px #f66, -3px -1px #66f;
+
+  // For images; section-specific config at bottom of file : )
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.folio-section__title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  transform: skew(-5deg, -5deg);
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+}
+
+.folio-section-two {
+	flex-grow: 1;
+	background-color: #f9faff;
+  padding: 3rem 4rem;
+  overflow-x: hidden;
+}
+
+.folio-section__content {
+  max-width: $text-content-max-width;
+  line-height: 1.5;
+  color: $text-color;
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    @include text-link;
+  }
+}
+
+.folio-section__bandcamp {
+  max-width: $text-content-max-width;
+}
+
+.folio-bio {
+	.folio-section-one {
+		background-image: url(../img/8bit_ev.png);
+    background-size: 70%;
+	}
+}
+
+.folio-comps {
+  .folio-section-one {
+    background-image: url(../img/pencil.png);
+    background-size: 40%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
+.folio-luckbox {
+  .folio-section-one {
+    background-image: url(../img/lckb.png);
+    background-size: 40%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
+.folio-transcriptions {
+  .folio-section-one {
+    background-image: url(../img/hearing.png);
+    background-size: 70%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
+.folio-old-beats {
+  .folio-section-one {
+    background-color: #444d8c;
+  }
+}
+
+.folio-section__images, .folio-section__sounds {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar {
+      height: 3px;
+      background-color: #F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      background-color: #fcc;
+  }
+}
+
+.folio-section__image-wrapper {
+  display: inline-block;
+  text-align: center;
+  margin-right: 3rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.folio-section__image {
+    width: 200px;
+}
+
+.folio-section__image-name {
+  @include text-link;
+
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.folio-section__image-name-extra {
+  font-size: 14px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.folio-section__sound-wrapper {
+  // overflow: hidden;
+  // position: relative;
+  display: inline-block;
+  margin-right: 2rem;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.iframe-wrapper {
+  height: 180px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.soundcloud-iframe {
+  margin-top: -3px;
+}
+
+.folio-section__sound-description {
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.folio-section__sounds {
+  .logo {
+    display: none;
+  }
+
+  .cookiePolicy {
+    display: none;
+  }
+}
+
+$section-colors: (
+  bio: #ffb6c1,
+  luckbox: #caf,
+  comps: #14a,
+  beats: #19d,
+  transcriptions: #6de,
+  songs-for-things: #3da
+);
+
+$section-images: (
+  bio: "8bit_ev.png",
+  luckbox: "lckb.png",
+  comps: "pencil.png",
+  beats: "phones.png",
+  transcriptions: "hearing.png",
+  songs-for-things: "ppl.png"
+);
+
+$section-image-widths: (
+  bio: 70%,
+  luckbox: 40%,
+  comps: 40%,
+  beats: 30%,
+  transcriptions: 70%,
+  songs-for-things: 50%
+);
+
+
+@each $section, $color in $section-colors {
+  .folio-#{$section} {
+    background-color: $color;
+    border-bottom: 1px solid $color;
+  }
+}
+
+@each $section, $img in $section-images {
+  .folio-#{$section} .folio-section-one {
+    background-image: url(../img/#{$img});
+  }
+}
+
+@each $section, $width in $section-image-widths {
+  .folio-#{$section} .folio-section-one {
+    background-size: $width;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .folio-header {
+    background-size: 10%;
+  }
+
+  .folio-section {
+    flex-direction: column;
+  }
+
+  .folio-section-one {
+    width: 100%;
+    height: 6rem;
+    background-image: none !important;
+  }
+}

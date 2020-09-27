@@ -1,13 +1,13 @@
 meta:
   description: "Evan is on the Web!"
-  facebook_image: ""  # /img/facebook.png
-  twitter_image: ""  # /img/twitter.png
-  image: ""  # /img/share.png
-  twitter_handle: "@evantarrh"  # @minimill_co
-  domain: "evan.land"  # minimill.co
-  url: "http://evan.land"  # https://minimill.co
-  google_analytics_id: "UA-50221324-1" # UA-66637918-1
-  theme_color: "#F9F9F9" # #FFFFFF
+  facebook_image: "/img/8bit_ev.png"
+  twitter_image: "/img/8bit_ev.png"
+  image: "/img/8bit_ev.png"
+  twitter_handle: "@evantarrh"
+  domain: "evan.land"
+  url: "http://evan.land"
+  google_analytics_id: "UA-50221324-1"
+  theme_color: "#fff"
 
 projects:
   -
@@ -150,3 +150,134 @@ projects:
         url: "/pdf/personal_sites.pdf"
     class-name: "talks"
  # Future: wiki ipsum
+
+folio-sections:
+  -
+   title: "bio"
+   class-name: "bio"
+   text:
+    - "Evan started playing piano when he was 6 years old because he got jealous of his
+       brother's piano lessons, and he never stopped. Growing up in Lexington, MA, he cultivated
+       a deep love for jazz at Lexington High School, and helped lead the combo and jazz ensembles
+       to awards at the national Ellington, Mingus, and Berklee festivals while also earning
+       solo performance awards. At Columbia University, he continued to study jazz with Bruce Barth
+       as he pursued a degree in computer science. Columbia's Computer Music Center sparked Evan's interest
+       in the intersection between computing and music, which led to his exploration and pursuit of music
+       production."
+    - "Evan graduated from Columbia in 2016 and currently lives in New York. He continues to write,
+       produce, and perform creative music while working as a software engineer."
+  -
+   title: "luckbox"
+   class-name: "luckbox"
+   bandcamp: true
+   text:
+    - "A collection of instrumental music I wrote, recorded, and produced in 2019. Also on
+      <a href=\"https://open.spotify.com/album/5tfFBEKTixAvC3PsnXv5CJ?si=KDtbsmgOTxWFNmBtU2yotw\">
+      Spotify</a>!"
+  -
+   title: "compositions (traditional)"
+   class-name: "comps"
+   images:
+    -
+      link-url: '/img/music/pdf/my_time.pdf'
+      image-url: '/img/music/png/my_time.png'
+      name: "my time"
+    -
+      link-url: '/img/music/pdf/dime_si_o_no.pdf'
+      image-url: '/img/music/png/dime_si_o_no.png'
+      name: "dime sí o no"
+    -
+      link-url: '/img/music/pdf/cosmos.pdf'
+      image-url: '/img/music/png/cosmos.png'
+      name: "cosmos"
+    -
+      link-url: '/img/music/pdf/ltr_ltw.pdf'
+      image-url: '/img/music/png/ltr_ltw.png'
+      name: "loves to read, loves to write"
+    -
+      link-url: '/img/music/pdf/spaceman_spiff.pdf'
+      image-url: '/img/music/png/spaceman_spiff.png'
+      name: "spaceman spiff"
+    -
+      link-url: '/img/music/pdf/captain_underpants.pdf'
+      image-url: '/img/music/png/captain_underpants.png'
+      name: "captain underpants"
+  -
+   title: "selected soundcloud beats"
+   class-name: "beats"
+   soundclouds:
+    -
+      track-id: "900635590"
+      track-name: "jaro"
+    -
+      track-id: "799539292"
+      track-name: "practice 001"
+    -
+      track-id: "809967796"
+      track-name: "_"
+    -
+      track-id: "320407934"
+      track-name: "is this jazz lol"
+    -
+      track-id: "433223661"
+      track-name: "forward/onward"
+  -
+   title: "transcriptions"
+   class-name: "transcriptions"
+   images:
+    -
+      link-url: '/img/music/pdf/flor_de_lis.pdf'
+      image-url: '/img/music/png/flor_de_lis.png'
+      name: "flor de lis"
+      extra:
+        - "aaron parks solo"
+        - "(gretchen parlato, 2004)"
+    -
+      link-url: '/img/music/pdf/there_will_never.pdf'
+      image-url: '/img/music/png/there_will_never.png'
+      name: "there will never be another you"
+      extra:
+        - "kenny garrett solo"
+        - "(solid, 1986)"
+    -
+      link-url: '/img/music/pdf/autumn_leaves.pdf'
+      image-url: '/img/music/png/autumn_leaves.png'
+      name: "autumn leaves"
+      extra:
+        - "makoto ozone solo"
+        - "(dear oscar, 1998)"
+    -
+      link-url: '/img/music/pdf/if_i_were_a_bell.pdf'
+      image-url: '/img/music/png/if_i_were_a_bell.png'
+      name: "if i were a bell"
+      extra:
+        - "gerald clayton arrangement"
+        - "(bond: the paris sessions, 2011)"
+    -
+      link-url: '/img/music/pdf/sofi.pdf'
+      image-url: '/img/music/png/sofi.png'
+      name: "sofi"
+      extra:
+        - "makoto ozone solo"
+        - "(pandora, 2000)"
+
+  -
+   title: "songs i made for things"
+   class-name: "songs-for-things"
+   soundclouds:
+    -
+      track-id: "900525316"
+      track-name: "TS_001"
+      description: "intro song for Techsetters podcast"
+    -
+      track-id: "900525010"
+      track-name: "TS_002"
+      description: "Techsetters alternate intro"
+    -
+      track-id: "308561843"
+      track-name: "games that made us"
+      description: "podcast intro for The Games That Made Us"
+    -
+      track-id: "900526615"
+      track-name: "squid"
+      description: 'song for iOS arcade game "Squid"'

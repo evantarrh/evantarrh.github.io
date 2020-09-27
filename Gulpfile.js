@@ -173,18 +173,6 @@ gulp.task(
   )
 );
 
-gulp.task('deploy:rsync', function(done) {
-  cp.exec('rsync -avuzh ./dist/* dan:/srv/agtech-circle.schlosser.io/public_html/', function() {
-    process.stdout.write("Deployed to https://agtech-circle.schlosser.io\n");
-    done();
-  })
-  .stdout.on('data', function(data) {
-    process.stdout.write(data);
-  });
-});
-
-gulp.task('deploy', gulp.series('build:optimized', 'deploy:rsync'));
-
 // use default task to launch Browsersync and watch JS files
 gulp.task('serve', gulp.series('build', function(done) {
 

@@ -2,6 +2,7 @@
 @import 'base';
 @import 'nav';
 @import 'code';
+@import 'folio';
 
 $ease-function: cubic-bezier(.68,.1,.11,.99);
 
@@ -256,5 +257,28 @@ div.letter-wrapper {
 
   .nav {
     font-size: 1.5rem;
+    top: 0 !important;
+    transform: translateX(-50%) !important;
+    margin-bottom: 3rem;
+
+    a {
+      padding-bottom: 1px;
+      border-bottom: 2px solid $warm-gray;
+
+      &:hover, &.hover-fx {
+        border-bottom: 1px solid $warm-gray;
+        padding-bottom: 2px;
+      }
+    }
+
+    span {
+      display: block;
+      margin: 1.5rem auto;
+    }
+  }
+
+  .gem {
+    display: block;
+    margin: 1rem auto;
   }
 }

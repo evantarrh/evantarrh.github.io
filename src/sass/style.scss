@@ -128,7 +128,6 @@ div.letter-wrapper {
   font-size: 0.8rem;
 
   bottom: 0;
-  right: 0;
   position: absolute;
   margin: 1rem;
 
@@ -145,6 +144,18 @@ div.letter-wrapper {
       border-bottom: 1px solid $neutral-gray;
     }
   }
+}
+
+.corner-link-left {
+  @extend .corner-link;
+
+  left: 0;
+}
+
+.corner-link-right {
+  @extend .corner-link;
+
+  right: 0;
 }
 
 .gem {

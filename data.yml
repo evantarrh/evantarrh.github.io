@@ -167,9 +167,21 @@ folio-sections:
     - "Evan graduated from Columbia in 2016 and currently lives in New York. He continues to write,
        produce, and perform creative music while working as a software engineer."
   -
+   title: "bug band"
+   class-name: "bug-band"
+   bandcamp-embed: true
+   bandcamp-album-url: "https://evantarrh.bandcamp.com/album/bug-band-ost"
+   bandcamp-embed-url: "https://bandcamp.com/EmbeddedPlayer/album=949668905/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/"
+   bandcamp-embed-title: "Present by Luckbox"
+   text:
+    - "My friends made a game about bugs rocking out, and I made the music for it! It rules, play it <a href=\"https://mariopartygod.itch.io/bug-band-beta\">here</a>!"
+  -
    title: "luckbox"
    class-name: "luckbox"
-   bandcamp: true
+   bandcamp-embed: true
+   bandcamp-album-url: "https://evantarrh.bandcamp.com/album/present"
+   bandcamp-embed-url: "https://bandcamp.com/EmbeddedPlayer/album=1482893618/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/"
+   bandcamp-embed-title: "Present by Luckbox"
    text:
     - "A collection of instrumental music I wrote, recorded, and produced in 2019. Also on
       <a href=\"https://open.spotify.com/album/5tfFBEKTixAvC3PsnXv5CJ?si=KDtbsmgOTxWFNmBtU2yotw\">

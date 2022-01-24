@@ -112,6 +112,15 @@ $text-content-max-width: 600px;
   }
 }
 
+.folio-bug-band {
+  .folio-section-one {
+    background-image: url(../img/bugz.png);
+    background-size: 100%;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
 .folio-luckbox {
   .folio-section-one {
     background-image: url(../img/lckb.png);
@@ -225,7 +234,8 @@ $text-content-max-width: 600px;
 
 $section-colors: (
   bio: #ffb6c1,
-  luckbox: #caf,
+  bug-band: #ecf,
+  luckbox: #a9f,
   comps: #14a,
   beats: #19d,
   transcriptions: #6de,
@@ -234,6 +244,7 @@ $section-colors: (
 
 $section-images: (
   bio: "8bit_ev.png",
+  bug-band: "bugz.png",
   luckbox: "lckb.png",
   comps: "pencil.png",
   beats: "phones.png",

@@ -172,19 +172,19 @@ folio-sections:
    bandcamp-embed: true
    bandcamp-album-url: "https://evantarrh.bandcamp.com/album/bug-band-ost"
    bandcamp-embed-url: "https://bandcamp.com/EmbeddedPlayer/album=949668905/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/"
-   bandcamp-embed-title: "Present by Luckbox"
+   bandcamp-embed-title: "Bug Band OST"
    text:
     - "My friends made a game about bugs rocking out, and I made the music for it! It rules, play it <a href=\"https://mariopartygod.itch.io/bug-band-beta\">here</a>!"
   -
    title: "luckbox"
    class-name: "luckbox"
    bandcamp-embed: true
-   bandcamp-album-url: "https://evantarrh.bandcamp.com/album/present"
-   bandcamp-embed-url: "https://bandcamp.com/EmbeddedPlayer/album=1482893618/size=large/bgcol=ffffff/linkcol=f171a2/tracklist=false/artwork=small/transparent=true/"
-   bandcamp-embed-title: "Present by Luckbox"
+   bandcamp-album-url: "https://evantarrh.bandcamp.com/album/room-2-grow"
+   bandcamp-embed-url: "https://bandcamp.com/EmbeddedPlayer/album=39639014/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+   bandcamp-embed-title: "room 2 grow by Luckbox"
    text:
-    - "A collection of instrumental music I wrote, recorded, and produced in 2019. Also on
-      <a href=\"https://open.spotify.com/album/5tfFBEKTixAvC3PsnXv5CJ?si=KDtbsmgOTxWFNmBtU2yotw\">
+    - "I've released a couple of EPs under my indie jazz project, Luckbox. You can check out the music I wrote, recorded, and produced on Bandcamp or
+      <a href=\"https://open.spotify.com/artist/4pJVDHbXscyyDrzbxWQqkZ?si=C33PqbLXTuyU9_-vgFl2Vg\">
       Spotify</a>!"
   -
    title: "compositions (traditional)"
@@ -237,6 +237,13 @@ folio-sections:
    title: "transcriptions"
    class-name: "transcriptions"
    images:
+    -
+      link-url: '/img/music/pdf/all_of_you.pdf'
+      image-url: '/img/music/png/all_of_you.png'
+      name: "all of you"
+      extra:
+        - "herbie hancock solo"
+        - "(miles davis quintet, 1964)"
     -
       link-url: '/img/music/pdf/flor_de_lis.pdf'
       image-url: '/img/music/png/flor_de_lis.png'

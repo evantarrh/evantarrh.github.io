@@ -9,7 +9,7 @@
     "gulp-eslint": "^6.0.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.27.7",
+    "browser-sync": "^2.29.1",
     "del": "^6.0.0",
     "eslint": "^8.7.0",
     "eslint-plugin-import": "^2.25.4",

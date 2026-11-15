@@ -1,0 +1,555 @@
+:root {
+  --theme: #347;
+
+  --sunrise-gradient: linear-gradient(90deg, #2d5699, #9c1a9a);
+  --sunrise-gradient-hover: linear-gradient(90deg, #2d5699, #dc5fa2, #faa462, #ffdd47);
+
+  --default-gradient: linear-gradient(135deg, #538b1b, #88cc66);
+  --default-gradient-hover: linear-gradient(135deg, #66aa22, #ace151, #ffe159);
+
+  --feb-2026-gradient: linear-gradient(265deg, #3b6e69, #8fbfe7);
+  --feb-2026-gradient-hover: linear-gradient(265deg, #55a49c, #c0e7f6, #89f6eb);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: rgb(18, 30, 42); /* Dark gray for overscroll */
+
+  @media (min-width: 800px) {
+   background-color: #fff;
+  }
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 100dvh;
+  background: #fff;
+  color: var(--theme);
+}
+
+#app {
+  margin: 0 auto;
+}
+
+.statement {
+  padding: 2rem;
+  font-family: "Kode Mono";
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  /* Minimum space between the list and the quote */
+  gap: 5rem;
+}
+
+.statement ul {
+  list-style: none;
+}
+
+.quote {
+  /* Soak up any extra height so the quote sits at the bottom */
+  margin-top: auto;
+  text-align: right;
+}
+
+/* Mobile: image stacked full-width above the statement */
+.hero-area {
+  display: flex;
+  flex-direction: column;
+
+  /* Tablet/desktop: side by side. The image comes first in the HTML,
+     so row-reverse puts it on the right. */
+  @media (min-width: 800px) {
+    flex-direction: row-reverse;
+    height: 75dvh;
+    min-height: 600px;
+  }
+}
+
+.statement {
+  font-size: 18px;
+
+  @media (min-width: 800px) {
+    /* Take whatever width the image leaves */
+    flex: 1;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: 80rem) {
+    font-size: 26px;
+    padding: 3rem;
+  }
+}
+
+.piano-image {
+  width: 100%;
+  /* An empty div has no height, so size it from the image's proportions */
+  aspect-ratio: 2820 / 1720;
+  background-image: url('./assets/piano.png');
+  background-size: cover;
+  background-position: center;
+  image-rendering: -webkit-optimize-contrast;
+
+  /* rotate() only changes how a box is painted, not the space it takes up.
+     So make this box portrait and rotate a landscape-sized layer inside it. */
+  @media (min-width: 800px) {
+    /* Height stretches to fill .hero-area; width follows from the portrait ratio */
+    position: relative;
+    flex: none;
+    width: auto;
+    max-width: 50%;
+    aspect-ratio: 1720 / 2820;
+    background-image: none;
+    overflow: hidden;
+    container-type: size;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      /* Swap width/height so the layer is portrait once rotated */
+      width: 100cqh;
+      height: 100cqw;
+      background: url('./assets/piano.png') center / cover;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+}
+
+.section {
+  margin: 3rem auto;
+  max-width: 1000px;
+
+  padding: 0 3rem;
+
+  h3 {
+    font-family: "Bricolage Grotesque";
+    font-weight: 600;
+    font-size: 1.5rem;
+    display: flex;
+    color: #459;
+    white-space: nowrap;
+  }
+
+  h3::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: var(--theme);
+    transform: translateY(14px);
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  @media (min-width: 800px) {
+    padding: 0 6rem;
+  }
+}
+
+.portfolio {
+  ul {
+    list-style: none;
+    font-size: 1.5rem;
+
+    li {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      text-align: left;
+      position: relative;
+
+      &.star::before {
+        content: "⭐︎";
+        position: absolute;
+        left: -32px;
+        font-size: 1.4rem;
+        transform-origin: 51% 56%;
+      }
+
+      &:hover&::before {
+        animation: spin 2s linear infinite;
+      }
+
+      .thing-title {
+        font-family: "Kode Mono";
+        font-size: 1.4rem;
+
+        text-align: left;
+        line-height: 1.2;
+        height: fit-content;
+      }
+    }
+
+    .separator {
+      margin: 0 1rem;
+      font-size: 24px;
+      display: none;
+
+      @media (min-width: 800px) {
+        display: inline;
+      }
+    }
+
+    .separator-small {
+      margin: 0 1rem;
+      font-size: 18px;
+      display: none;;
+    }
+
+    .cta {
+      display: block;
+      margin-top: 12px;
+
+      @media (min-width: 800px) {
+        margin-top: 0;
+        display: inline;
+      }
+    }
+
+    .cta a {
+      border-bottom: 2px solid #4a4;
+      color: #000;
+      font-weight: 500;
+      padding-bottom: 5px;
+      text-decoration: none;
+      transition: .1s ease all;
+      -webkit-transition: .1s ease all;
+
+      &:hover {
+        border-bottom: 2px solid #5a5;
+        padding-bottom: 1px;
+        transition: .2s ease all;
+        -webkit-transition: .2s ease all;
+        color: #6c6;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      @media (min-width: 800px) {
+        border-bottom: 2px solid transparent;
+      }
+    }
+
+    .cta a::after {
+      content: " ☞";
+      font-size: 24px;
+      vertical-align: middle;
+      opacity: 0;
+      display: none;
+
+      @media (min-width: 800px) {
+        display: inline;
+      }
+    }
+
+    .description {
+      padding-left: 24px;
+      max-width: 800px;
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.4;
+      font-family: "Bricolage Grotesque";
+      padding-top: 24px;
+      padding-bottom: 12px;
+
+      @media (min-width: 800px) {
+        padding-left: 48px;
+        padding-top: 12px;
+      }
+    }
+
+    .description-small {
+      font-style: italic;
+      font-family: "Bricolage Grotesque";
+      font-size: 16px;
+    }
+  }
+}
+
+.tag {
+  font-size: 14px;
+  font-family: "Bricolage Grotesque";
+  background: rgb(104, 83, 109);
+  color: white;
+  padding: 3px 8px;
+  vertical-align: middle;
+  bottom: 3px;
+  display: inline-block;
+  position: relative;
+}
+
+.thing-title {
+  position: relative;
+  /* Keep the z-index: -1 layers behind the text but above the page */
+  isolation: isolate;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.5rem;
+  background: var(--default-gradient);
+  color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: var(--default-gradient-hover);
+    background-size: 200% 200%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-shadow: 0 1px 2px rgb(0 0 0 / 0.6);
+
+    &::before {
+      opacity: 1;
+      animation: chrome 2s ease forwards;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &.sunrise {
+    background: var(--sunrise-gradient);
+
+    &::before {
+      background: var(--sunrise-gradient-hover);
+    }
+  }
+
+  &.feb-2026 {
+    background: var(--feb-2026-gradient);
+
+    &::before {
+      background: var(--feb-2026-gradient-hover);
+    }
+  }
+}
+
+.thing-title-simple {
+  font-family: "Kode Mono";
+  font-size: 18px;
+  /* margin-right: 12px; */
+
+  a {
+      border-bottom: 2px solid transparent;
+      color: #000;
+      font-weight: 500;
+      padding-bottom: 5px;
+      text-decoration: none;
+      transition: .1s ease all;
+      -webkit-transition: .1s ease all;
+
+      &:hover {
+        border-bottom: 2px solid #5a5;
+        padding-bottom: 1px;
+        transition: .2s ease all;
+        -webkit-transition: .2s ease all;
+        color: #6c6;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+
+    a::after {
+      content: "☞";
+      font-size: 24px;
+      vertical-align: middle;
+      opacity: 0;
+    }
+}
+
+.more-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: wrap;
+
+  @media (min-width: 800px) {
+    flex-direction: row;
+  }
+}
+
+@keyframes chrome {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bandcamp-wrapper {
+  text-align: center;
+}
+
+.small-album-section-info {
+  font-size: 14px;
+  color: #999;
+  font-family: 'Bricolage Grotesque';
+  font-style: italic;
+}
+
+.portfolio ul li.album-rec {
+  display: flex;
+  font-family: 'Bricolage Grotesque';
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  img {
+    width: 160px;
+    border-radius: 5px;
+  }
+
+  .album-info {
+    margin-left: 12px;
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .artist {
+    font-size: 14px;
+  }
+}
+
+.footie {
+  margin: 0 auto;
+  max-width: 1000px;
+  position: relative;
+  margin-top: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .ev-image {
+    width: 350px;
+    bottom: 0;
+    aspect-ratio: 1201 / 1233;
+
+    background-image: url('./assets/ev.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .socials {
+    width: 300px;
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    text-align: center;
+    font-family: "Kode Mono";
+
+    li {
+      margin-bottom: 1rem;
+      font-size: 18px;
+    }
+  }
+
+  a {
+    border-bottom: 2px solid transparent;
+    color: #455;
+    padding-bottom: 5px;
+    text-decoration: none;
+    transition: .1s ease all;
+    -webkit-transition: .1s ease all;
+
+    &:hover {
+      border-bottom: 2px solid #5a5;
+      padding-bottom: 1px;
+      transition: .2s ease all;
+      -webkit-transition: .2s ease all;
+      color: #6c6
+    }
+  }
+}
+
+.email:hover {
+  cursor: pointer;
+}
+
+.disclaimer {
+  font-size: 12px;
+}
+
+.footie a.old-link {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  color: #ddd;
+  padding-bottom: 1px;
+  font-size: 12px;
+  display: none;
+
+  &:hover {
+    color: #bbb;
+    border-bottom: 2px solid #b4cfb4;
+    padding-bottom: 1px;
+  }
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
+.bumpy {
+  animation: bump 0.5s linear infinite;
+  display: inline-block;
+  position: relative;
+}
+
+.bumpy-2 {
+  animation: bump2 0.5s linear infinite;
+  display: inline-block;
+  position: relative;
+}
+
+@keyframes bump {
+  0%, 100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+}
+
+@keyframes bump2 {
+  0%, 100% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}

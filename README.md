@@ -1,13 +1,22 @@
-evantarrh.github.io
-=====================
+## Stack
+Vite + vanilla TypeScript + CSS
 
-My personal site!
+## Commands
+- `npm run dev` — start dev server
+- `npm run build` — typecheck + production build (output: `dist/`)
+- `npm run preview` — preview production build locally
 
-With thanks to [Minimill](https://minimill.co) for their [project
-template](https://github.com/minimill/project-template).
+## Structure
+- `index.html` — entry point (Vite root)
+- `src/main.ts` — app entry, renders into `#app`
+- `src/style.css` — global styles
+- `docs/` — planning docs and content info (not deployed)
 
-Found a bug? [Let me know](https://github.com/evantarrh/evantarrh.github.io/issues/new) :)
+## Setup
 
-# do not look at the code lol
+`npm install`
+`npm run dev`
 
-to deploy, run gulp build locally, `cp dist/* .`, and sync with `gh-pages` branch
+## Deploy me
+
+`npm run build`, then `cp dist/* .`, then commit on gh-pages and push
